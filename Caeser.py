@@ -19,10 +19,10 @@ def main():
     shift = st.slider("Shift by:", 1, 25, 3)
 
     if st.button("Go"):
-        if choice == "Encode":
+        if choice == "Encrypt":
             result = caesar_cipher(text, shift)
             st.success(f"Encoded Message: {result}")
-        elif choice == "Decode":
+        elif choice == "Decrypt":
             result = caesar_cipher(text, shift, encrypt=False)
             st.success(f"Decoded Message: {result}")
 
