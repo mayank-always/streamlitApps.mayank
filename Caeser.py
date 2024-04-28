@@ -12,8 +12,8 @@ def caesar_cipher(text, shift, encrypt=True):
     return result 
 
 def main():
-    st.title("Caeser Cipher- Draft 3")
-    st.caption("~Mayank B. 04/25/24")
+    st.title("3 yaar, 4 saal, 3 baar")
+    st.caption("~Bhaavi Rashtrapatni ji ke mukhya salhakaar")
     choice = st.radio("Choose:", ("Encode", "Decode"))
     text = st.text_area("Type your message:")
     shift = st.slider("Shift by:", 1, 25, 3)
