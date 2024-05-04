@@ -16,28 +16,32 @@ def main():
     st.title("Caeser Cipher Draft 5.0")  # Setting up the title of the web app
     st.caption("By Mayank B. 05/03/24")
 
-    # Add general rules / how to use the app column on the left side
+    #general rules / how to use the app column on the left side
+    st.sidebar.title("What is Caeser Cipher?")
+    st.sidebar.write("In the Caesar cipher, each letter in the plaintext (the message to be encrypted) is shifted a certain number of places down or up the alphabet. For example, with a shift of 3, 'A' would be replaced by 'D', 'B' would become 'E', and so on. When the end of the alphabet is reached, the shifting wraps around to the beginning.")
+
+
     st.sidebar.title("How to Use")
     st.sidebar.write("1. Choose whether to encode or decode a message.")
     st.sidebar.write("2. Type your message in the text area.")
     st.sidebar.write("3. Use the slider to select the shift value or click 'Randomize' to generate a random shift value.")
     st.sidebar.write("4. Click 'Go' to encode or decode your message.")
     
-    choice = st.radio("Choose:", ("Encode", "Decode"))  # Providing options for encoding or decoding
-    text = st.text_area("Type your message:")  # Text input for the user's message
-    random_shift = st.checkbox("Randomize Shift Value")  # Checkbox to randomize the shift value
+    choice = st.radio("Choose:", ("Encode", "Decode"))  
+    text = st.text_area("Type your message:")  
+    random_shift = st.checkbox("Randomize Shift Value") 
     if not random_shift:
-        shift = st.slider("Shift by:", 1, 25, 3)  # Slider for selecting the shift value
+        shift = st.slider("Shift by:", 1, 25, 3)  
     else:
         shift = random.randint(1, 100)  # Generate a random shift value if checkbox is selected
 
-    if st.button("Go"):  # Button to trigger processing
+    if st.button("Go"): 
         if choice == "Encode":
             result = caesar_cipher(text, shift)  # Encode the message
-            st.success(f"Encoded Message: {result}")  # Display the encoded message
+            st.success(f"Encoded Message: {result}")  
         elif choice == "Decode":
             result = caesar_cipher(text, shift, encrypt=False)  # Decode the message
-            st.success(f"Decoded Message: {result}")  # Display the decoded message
+            st.success(f"Decoded Message: {result}")  
 
 if __name__ == "__main__":
-    main()  # Call the main function when the script is run
+    main()  
