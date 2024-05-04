@@ -3,7 +3,7 @@ import random
 
 def caesar_cipher(text, shift, encrypt=True):
     result = ""
-    for char in text:  # Loop through each character in the text
+    for char in text:  
         if char.isalpha():  # Check if the character is a letter
             base = ord('A') if char.isupper() else ord('a')  # Get the ASCII value of 'A' or 'a'
             shifted_char = chr((ord(char) - base + shift) % 26 + base) if encrypt else chr((ord(char) - base - shift) % 26 + base)  # Shift the character by the shift value
@@ -13,8 +13,9 @@ def caesar_cipher(text, shift, encrypt=True):
     return result  # Return the encrypted or decrypted message
 
 def main():
-    st.title("Caeser Cipher Draft 5.0")  # Setting up the title of the web app
-    st.caption("By Mayank B. 05/03/24)
+st.title("Caeser Cipher Draft 5.0")  # Setting up the title of the web app
+st.caption("By Mayank B. 05/03/24")
+
     # Add general rules / how to use the app column on the left side
     st.sidebar.title("How to Use")
     st.sidebar.write("1. Choose whether to encode or decode a message.")
@@ -28,7 +29,7 @@ def main():
     if not random_shift:
         shift = st.slider("Shift by:", 1, 25, 3)  # Slider for selecting the shift value
     else:
-        shift = random.randint(1, 25)  # Generate a random shift value if checkbox is selected
+        shift = random.randint(1, 100)  # Generate a random shift value if checkbox is selected
 
     if st.button("Go"):  # Button to trigger processing
         if choice == "Encode":
