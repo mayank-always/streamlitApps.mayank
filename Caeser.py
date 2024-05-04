@@ -6,7 +6,7 @@ def caesar_cipher(text, shift, encrypt=True):
     for char in text:  
         if char.isalpha():  # Check if the character is a letter
             base = ord('A') if char.isupper() else ord('a')  # Get the ASCII value of 'A' or 'a'
-            shifted_char = chr((ord(char) - base + shift) % 100 + base) if encrypt else chr((ord(char) - base - shift) % 26 + base)  # Shift the character by the shift value
+            shifted_char = chr((ord(char) - base + shift) % 26 + base) if encrypt else chr((ord(char) - base - shift) % 26 + base)  # Shift the character by the shift value
             result += shifted_char  # Add the shifted character to the result
         else:
             result += char  # If the character is not a letter, keep it unchanged
