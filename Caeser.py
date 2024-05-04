@@ -13,8 +13,8 @@ def caesar_cipher(text, shift, encrypt=True):
     return result  # Return the encrypted or decrypted message
 
 def main():
-    st.title("Secret Message Encoder/Decoder")  # Setting up the title of the web app
-
+    st.title("Caeser Cipher Draft 5.0")  # Setting up the title of the web app
+    st.caption("By Mayank B. 05/03/24)
     # Add general rules / how to use the app column on the left side
     st.sidebar.title("How to Use")
     st.sidebar.write("1. Choose whether to encode or decode a message.")
