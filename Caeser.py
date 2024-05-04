@@ -14,7 +14,7 @@ def caesar_cipher(text, shift, encrypt=True):
 
 def main():
     st.title("Caeser Cipher Draft 5.0")  # Setting up the title of the web app
-    st.caption("By Mayank B. 05/03/24")
+    st.caption("By Mayank B. 05/04/24")
 
     #general rules / how to use the app column on the left side
     st.sidebar.title("What is Caeser Cipher?")
