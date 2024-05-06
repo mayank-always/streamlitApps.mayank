@@ -13,8 +13,8 @@ def caesar_cipher(text, shift, encrypt=True):
     return result  # Return the encrypted or decrypted message
 
 def main():
-    st.title("Jai Hind")  # Setting up the title of the web app
-    st.caption("By Eno Bacha")
+    st.title("Caeser Cipher")  # Setting up the title of the web app
+    st.caption("By Mayank B.")
 
     #general rules / how to use the app column on the left side
     st.sidebar.title("What is Caeser Cipher?")
